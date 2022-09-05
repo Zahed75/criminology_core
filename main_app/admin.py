@@ -7,4 +7,15 @@ from .models import *
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
     list_display = ('course_title', 'course_image',
-                    'course_duration','class_size','class_durations','course_descriptions')
+                    'course_duration', 'class_size', 'class_durations', 'course_descriptions')
+
+
+@admin.register(CourseDetail)
+class CourseDetailAdmin(admin.ModelAdmin):
+    list_display = ('course_instructor', 'instructor_fb', 'instructor_twitter')
+
+
+@admin.register(TeacherSection)
+
+class TeacherSectionAdmin(admin.ModelAdmin):
+    list_display = ('TeacherName','TeacherDesignations','Descriptions')
