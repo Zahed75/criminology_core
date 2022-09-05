@@ -1,8 +1,5 @@
 /*-----------------------------------------------------------------------------------
-Theme Name: Edification
-Author: Jsoft
-Version: 1.0
-Description: Responsive Education HTML5 Template
+
 -----------------------------------------------------------------------------------
  CSS INDEX===================
     ##== Default Css
@@ -1293,7 +1290,7 @@ span.post-date i {
 }
 
 .hero-content h1 {
-  font-size: 60px;
+  font-size: 35px;
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 69px;
