@@ -31,6 +31,7 @@ class CourseDetail(models.Model):
 
 class TeacherSection(models.Model):
     TeacherName=models.CharField(max_length=700,blank=True)
+    TeacherImage=models.ImageField(upload_to='teacherprofile')
     TeacherDesignations=models.CharField(max_length=400,null=True)
 
 
