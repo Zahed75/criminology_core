@@ -18,4 +18,4 @@ class CourseDetailAdmin(admin.ModelAdmin):
 @admin.register(TeacherSection)
 
 class TeacherSectionAdmin(admin.ModelAdmin):
-    list_display = ('TeacherName','TeacherDesignations')
+    list_display = ('TeacherName','TeacherDesignations','TeacherImage')

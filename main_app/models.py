@@ -40,3 +40,5 @@ class TeacherSection(models.Model):
 
 class TeacherDetail(models.Model):
     TeacherName=models.ForeignKey(TeacherSection,on_delete=models.CASCADE,related_name='TeacherDetail')
+    FacebookLink=models.URLField(max_length=200,blank=True,null=True)
+    TwitterLink=models.URLField(max_length=200,blank=True,null=True)
