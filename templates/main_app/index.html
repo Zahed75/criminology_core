@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% load static %} {% block body_block %}
+{% extends "base.html" %}
+ {% load static %}
+  {% block body_block %}
 
 <!-- offset search area start -->
 <div class="offset-search">
@@ -110,8 +112,7 @@
            
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sciunt.
-            Neque quisquam est, qui dolorem ipsum tatem.
+           {{y.course_descriptions|slice:"150"}}
           </p>
           <ul class="course-meta-details list-inline w-100">
             <li>
