@@ -32,3 +32,8 @@ def teacher(request):
     dict={}
 
     return render(request,'main_app/teachers.html',context=dict)
+
+
+def teacher_details(request):
+    dict={}
+    return render(request,'main_app/teacher_details.html',context=dict)
