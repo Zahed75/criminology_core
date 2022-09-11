@@ -1,3 +1,5 @@
+from distutils.command.upload import upload
+from operator import mod
 from django.db import models
 
 
@@ -42,3 +44,14 @@ class TeacherDetail(models.Model):
     TeacherName=models.ForeignKey(TeacherSection,on_delete=models.CASCADE,related_name='TeacherDetail')
     FacebookLink=models.URLField(max_length=200,blank=True,null=True)
     TwitterLink=models.URLField(max_length=200,blank=True,null=True)
+
+
+class WelcomeSection(models.Model):
+    chairman_name=models.CharField(max_length=100,null=True,blank=True)
+    welcome_message=models.TextField(max_length=5000,null=True,blank=True)
+    chairman_image=models.ImageField(upload_to='chairman')
+
+    def __str__(self) -> str:
+        return self.chairman_name
+
+        

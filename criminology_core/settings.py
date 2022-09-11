@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main_app',
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 MIDDLEWARE = [
@@ -141,8 +142,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'public/static/')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 # MEDIA_DIR
-MEDIA_ROOT = '/media/'
-MEDIA_URL = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = MEDIA_DIR
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

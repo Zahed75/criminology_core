@@ -40,7 +40,7 @@
 
 
 
-
++
 <div class="container">
         
 </div>
@@ -50,16 +50,22 @@
 <div class="container">
 <div class="row">
     <div class="col-md-12">
+        {% for x in  welcontent %}
         <div class="dp-head">
+           
+           
             <h2 class="dp-heading" >Welcome to  Criminology Department</h2>
-            <img  class="image--cover" src="{% static 'assets/images/teacher/teacher-member1.jpg' %}" />
-
+            <img  class="image--cover" src="{{x.chairman_image.url}}" />
+            <h6>{{x.chairman_name}}</h6>
             <h5>Chairman of the Department</h5>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In exercitationem at, officia eius nam aperiam tempore repellat placeat eveniet hic eum inventore doloribus deleniti 
                 necessitatibus aliquam. Voluptatem maiores  dolor sit amet consectetur adipisicing elit. In exercitationem at, officia eius nam aperiam tempore repellat placeat eveniet hic eum inventore doloribus deleniti 
                 necessitatibus aliquam. Voluptatem maiores  itaque inventore.</p>
+
+             
             
         </div>
+        {% endfor %}
     </div>
 </div>
 </div>

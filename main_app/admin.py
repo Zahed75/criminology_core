@@ -16,6 +16,10 @@ class CourseDetailAdmin(admin.ModelAdmin):
 
 
 @admin.register(TeacherSection)
-
 class TeacherSectionAdmin(admin.ModelAdmin):
-    list_display = ('TeacherName','TeacherDesignations','TeacherImage')
+    list_display = ('TeacherName', 'TeacherDesignations', 'TeacherImage')
+
+
+@admin.register(WelcomeSection)
+class WelcomeSectionAdmin(admin.ModelAdmin):
+    list_display= ('chairman_name', 'welcome_message', 'chairman_image')

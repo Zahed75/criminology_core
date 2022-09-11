@@ -35,4 +35,15 @@
 
 .dp-head h5{
     text-align: center;
+    
+}
+
+.dp-head p{
+    /* text-align: center; */
+    justify-content: center;
+    padding: 10px;
+}
+
+.dp-head h6{
+    text-align: center;
 }

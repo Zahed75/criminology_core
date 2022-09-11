@@ -5,5 +5,7 @@ from main_app.pacakge import *
 
 
 def index(request):
-    dict = {}
+    welcontent=WelcomeSection.objects.all()
+   
+    dict = {'welcontent':welcontent}
     return render(request, 'main_app/index.html', context=dict)
