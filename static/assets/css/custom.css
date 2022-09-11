@@ -1,0 +1,38 @@
+.dp-head h2 {
+    text-align: center;
+    color: #fc9928 !important;
+    margin-top: 10px;
+    padding: 2px;
+}
+
+/* .circular--square { 
+    border-top-left-radius: 50% 50%; 
+    border-top-right-radius: 50% 50%; 
+    border-bottom-right-radius: 50% 50%; 
+    border-bottom-left-radius: 50% 50%; 
+
+
+} */
+
+
+.wrapper {
+    padding: 100px;
+}
+
+.image--cover {
+    width: 250px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 15px;
+
+    object-fit: cover;
+    object-position: center right;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.dp-head h5{
+    text-align: center;
+}
