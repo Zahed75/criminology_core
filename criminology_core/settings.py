@@ -27,6 +27,8 @@ SECRET_KEY = 'django-insecure-mi%v4kpg@921@-!28r1546l$=gn%%p*47_+()p-c_c2km(4bvl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+PRODUCTION = False
+
 ALLOWED_HOSTS = ['*']
 
 
@@ -75,15 +77,29 @@ WSGI_APPLICATION = 'criminology_core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if PRODUCTION:
+    DATABASES = {
+        # Production configuration
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': '',
+            'USER': '',
+            'PASSWORD': 'hckwKSkiePMJwTs6',
+            'HOST': '127.0.0.1',
+            'PORT': '3306',
+        }
     }
-}
-
-
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'criminology_server',
+            'USER': 'root',
+            'PASSWORD': '',
+            'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+            'PORT': '3306',
+        }
+    }
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
