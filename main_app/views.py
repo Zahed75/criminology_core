@@ -24,8 +24,13 @@ def about(request):
 def course(request):
     dict={}
 
-    return render(request,'main_app/course.html',context=dict)
+    return render(request,'main_app/courses.html',context=dict)
 
+
+def course_details(request):
+    dict={}
+
+    return render(request,'main_app/course-details.html',context=dict)
 
 
 def teacher(request):
@@ -36,4 +41,5 @@ def teacher(request):
 
 def teacher_details(request):
     dict={}
-    return render(request,'main_app/teacher_details.html',context=dict)
+    return render(request,'main_app/teacher-details.html',context=dict)
+
