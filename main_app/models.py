@@ -1,9 +1,3 @@
-from distutils.command.upload import upload
-from email.mime import image
-from operator import mod
-from pyexpat import model
-from tkinter.tix import Tree
-from turtle import title
 from django.db import models
 
 
