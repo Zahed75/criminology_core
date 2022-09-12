@@ -1,34 +1,37 @@
 from distutils.command.upload import upload
+from email.mime import image
 from operator import mod
+from pyexpat import model
+from tkinter.tix import Tree
 from django.db import models
 
 
 # Create your models here.
 
 
-class Course(models.Model):
-    course_title = models.CharField(max_length=500)
-    course_image = models.ImageField(upload_to='course_images')
-    course_duration=models.CharField(max_length=20,blank=True,null=True)
-    class_size=models.CharField(max_length=20)
-    class_durations=models.CharField(max_length=20)
-    course_descriptions = models.TextField(max_length=1000, blank=True, null=True)
+class Home(models.Model):
+    heading=models.CharField(max_length=500,blank=True,null=True)
+    sub_heading=models.CharField(max_length=400,null=True,blank=True)
+    
+    def __str__(self) -> str:
+        return self.heading
 
-    def __str__(self):
-        return self.course_title
+class Welcome(models.Model):
+    heading=models.TextField(max_length=5000,null=True,blank=True)
+    desricptions=models.TextField(max_length=10000,null=Tree,blank=True)
 
-
-class CourseDetail(models.Model):
-    course_title=models.ForeignKey(Course,on_delete=models.CASCADE,related_name='courseDetails')
-    course_instructor=models.CharField(max_length=200,blank=True,null=True)
-    instructor_designation=models.CharField(max_length=900)
-    instructor_fb=models.URLField(max_length=200,blank=True,null=True)
-    instructor_twitter=models.URLField(max_length=200,blank=True,null=True)
-
-    def __str__(self):
-        return str(self.course_title)
+    def __str__(self) -> str:
+        return self.heading
 
 
+class Facilites(models.Model):
+    title=models.CharField(max_length=400,blank=True,null=True)
+    image=models.ImageField(upload_to='facilites')
+    heading=models.CharField(max_length=500,blank=True,null=True)
+    created=models.DateTimeField(auto_now_add=True)
+
+    def __str__(self) -> str:
+        return self.title
 
 
 class TeacherSection(models.Model):
@@ -54,4 +57,3 @@ class WelcomeSection(models.Model):
     def __str__(self) -> str:
         return self.chairman_name
 
-        

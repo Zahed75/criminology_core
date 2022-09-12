@@ -5,10 +5,12 @@ from main_app.pacakge import *
 
 
 def index(request):
+    hm=Home.objects.all()
+    fac=Facilites.objects.all().order_by('id')
     welcontent=WelcomeSection.objects.all()
-    course_info=Course.objects.all()
    
-    dict = {'welcontent':welcontent,'course_info':course_info}
+  
+    dict = {'welcontent':welcontent,'hm':hm,'fac':fac}
     return render(request, 'main_app/index.html', context=dict)
 
 
@@ -27,7 +29,8 @@ def course(request):
     return render(request,'main_app/courses.html',context=dict)
 
 
-def course_details(request):
+def course_details(request,id):
+    
     dict={}
 
     return render(request,'main_app/course-details.html',context=dict)
