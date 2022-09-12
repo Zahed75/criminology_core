@@ -16,13 +16,13 @@
     <div class="row">
       <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
         <div class="hero-content">
-          <h3>Admission'20</h3>
+          <h3>CRIME|INVESTIGATIONS|TRACK</h3>
           <h1 class="mb-5">
             <span class="primary-color">Build your Successful</span
-            ><b class="line-break"></b>Future with Edification
+            ><b class="line-break"></b>Future with Criminology Department
           </h1>
           <p class="text-white-50">
-            Find Your Preferred Courses & Improve Your Skills
+            Find Your Preferred Informations & Improve Your Skills
           </p>
           <form action="#">
             <div class="form-input mt-5">
@@ -54,17 +54,14 @@
           <div class="section-title-style mb-4">
             <h2>
               Welcome to <b class="line-break"></b
-              ><span class="text-color">Edification</span> University
+              ><span class="text-color">Criminology </span> Department
             </h2>
           </div>
+            {% for z in wel %}
           <p class="text-white-70">
-            Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-            beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-            voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-            magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-            quisquam est, qui dolorem ipsum quia incidunt ut labore et dolore
-            magnam aliquam quaerat voluptatem.
+           {{z.descriptions}}
           </p>
+         {% endfor %}
           <a class="btn btn-light btn-round mt-3" href="#">Read more</a>
         </div>
       </div>
@@ -98,9 +95,9 @@
                                 <li><i class="fa fa-clock-o"></i>{{x.created}}</li>
                                 <li><i class="fa fa-comments"></i> 3 Comments</li>
                             </ul>
-                          <h4 class="card-title mb-4"><a href="blog-details.html">{{x.title}}</a></h4>
+                          <h4 class="card-title mb-4"><a href="/facilites-details/{{x.id}}">{{x.title}}</a></h4>
                           <p class="card-text">{{x.heading|slice:"200"}}......</p> 
-                          <a class="btn btn-primary btn-round btn-sm" href="#"> Read More </a>
+                          <a class="btn btn-primary btn-round btn-sm" href=""> Read More </a>
                         </div>
                       </div><!-- card -->      
                     </div>
@@ -119,7 +116,7 @@
         <div class="col-md-10 offset-md-1">
           <div class="section-title-style2 white-title text-center">
             <span>Take A Look</span>
-            <h2>Video Tour on Edification</h2>
+            <h2>Criminology Department Fairwell</h2>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ from email.mime import image
 from operator import mod
 from pyexpat import model
 from tkinter.tix import Tree
+from turtle import title
 from django.db import models
 
 
@@ -17,11 +18,10 @@ class Home(models.Model):
         return self.heading
 
 class Welcome(models.Model):
-    heading=models.TextField(max_length=5000,null=True,blank=True)
-    desricptions=models.TextField(max_length=10000,null=Tree,blank=True)
+    descriptions=models.TextField(max_length=1000,null=Tree,blank=True)
 
     def __str__(self) -> str:
-        return self.heading
+        return self.descriptions
 
 
 class Facilites(models.Model):
@@ -33,6 +33,17 @@ class Facilites(models.Model):
     def __str__(self) -> str:
         return self.title
 
+
+class FacilitiesDetails(models.Model):
+    title=models.ForeignKey(Facilites,on_delete=models.CASCADE,related_name='FacilitiesDetails')
+    descriptions=models.TextField(max_length=7000,blank=True,null=True)
+    teacher_name=models.CharField(max_length=500,blank=True,null=True)
+    teacher_designation=models.CharField(max_length=500,null=True,blank=True)
+    fb_link=models.URLField(max_length=500,null=True,blank=True)
+    twitter_link=models.URLField(max_length=500,null=True,blank=True)
+
+    def __str__(self) -> str:
+        return str('title')
 
 class TeacherSection(models.Model):
     TeacherName=models.CharField(max_length=700,blank=True)
@@ -49,7 +60,7 @@ class TeacherDetail(models.Model):
     TwitterLink=models.URLField(max_length=200,blank=True,null=True)
 
 
-class WelcomeSection(models.Model):
+class ChairmanSection(models.Model):
     chairman_name=models.CharField(max_length=100,null=True,blank=True)
     welcome_message=models.TextField(max_length=5000,null=True,blank=True)
     chairman_image=models.ImageField(upload_to='chairman')

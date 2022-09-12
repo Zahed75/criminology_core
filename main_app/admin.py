@@ -12,13 +12,16 @@ class HomeAdmin(admin.ModelAdmin):
 
 @admin.register(Welcome)
 class WelcomeAdmin(admin.ModelAdmin):
-    list_display= ('heading', 'desricptions')
+    list_display= ('descriptions',)
 
 @admin.register(Facilites)
 class FacilitesiAdmin(admin.ModelAdmin):
     list_display= ('title', 'image','created')
 
 
+@admin.register(FacilitiesDetails)
+class FacilitiesDetails(admin.ModelAdmin):
+    list_display=('title','descriptions','teacher_name','fb_link','twitter_link')
 
 
 @admin.register(TeacherSection)
@@ -26,6 +29,6 @@ class TeacherSectionAdmin(admin.ModelAdmin):
     list_display = ('TeacherName', 'TeacherDesignations', 'TeacherImage')
 
 
-@admin.register(WelcomeSection)
-class WelcomeSectionAdmin(admin.ModelAdmin):
+@admin.register(ChairmanSection)
+class ChairmanSectionAdmin(admin.ModelAdmin):
     list_display= ('chairman_name', 'welcome_message', 'chairman_image')

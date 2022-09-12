@@ -7,13 +7,21 @@ from main_app.pacakge import *
 def index(request):
     hm=Home.objects.all()
     fac=Facilites.objects.all().order_by('id')
-    welcontent=WelcomeSection.objects.all()
+    wel=Welcome.objects.all
+    welcontent=ChairmanSection.objects.all()
    
   
-    dict = {'welcontent':welcontent,'hm':hm,'fac':fac}
+    dict = {'welcontent':welcontent,'hm':hm,'fac':fac,'wel':wel}
     return render(request, 'main_app/index.html', context=dict)
 
 
+
+def faclities_details(request,pk):
+    fc_details=FacilitiesDetails.objects.get(title_id=pk)
+    fac=Facilites.objects.get(id=pk)
+    dict={'fc_details':fc_details,'fac':fac}
+
+    return render(request,'main_app/facilities-details.html',context=dict)
 
 
 def about(request):
