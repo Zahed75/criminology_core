@@ -86,7 +86,7 @@ if PRODUCTION:
             'NAME': 'criminology_app',
             'USER': 'du',
             'PASSWORD':'d4P4PFa3nYm4CKFN',
-            'HOST': 'localhost',
+            'HOST': '127.0.0.1',
             'PORT': '3306',
         }
     }
