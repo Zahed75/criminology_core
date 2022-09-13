@@ -85,7 +85,7 @@ if PRODUCTION:
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'criminology_app',
             'USER': 'criminology_app',
-            'PASSWORD': '35dtAGrHZiKkHtRK',
+            'PASSWORD': 'E6ZYekDA5GyLKRjP',
             'HOST': '127.0.0.1',
             'PORT': '3306',
         }
