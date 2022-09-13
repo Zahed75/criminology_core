@@ -29,7 +29,7 @@ DEBUG = True
 
 PRODUCTION = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['www.criminology.du.ac.bd']
 
 
 # Application definition
