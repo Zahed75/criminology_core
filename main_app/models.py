@@ -12,7 +12,7 @@ class Home(models.Model):
         return self.heading
 
 class Welcome(models.Model):
-    descriptions=models.TextField(max_length=1000,null=Tree,blank=True)
+    descriptions=models.TextField(max_length=1000,null=True,blank=True)
 
     def __str__(self) -> str:
         return self.descriptions
