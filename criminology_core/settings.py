@@ -29,7 +29,7 @@ DEBUG = True
 
 PRODUCTION = True
 
-ALLOWED_HOSTS = ['www.criminology.du.ac.bd']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -83,10 +83,10 @@ if PRODUCTION:
         # Production configuration
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'criminology_server',
-            'USER': 'criminology_server',
-            'PASSWORD': 'nB22Eyj7BKbaxKbp',
-            'HOST': '127.0.0.1',
+            'NAME': 'criminology_app',
+            'USER': 'du',
+            'PASSWORD':'d4P4PFa3nYm4CKFN',
+            'HOST': 'localhost',
             'PORT': '3306',
         }
     }
