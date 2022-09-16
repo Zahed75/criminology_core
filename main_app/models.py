@@ -1,3 +1,7 @@
+from distutils.command.upload import upload
+from operator import mod
+from statistics import mode
+from turtle import Turtle
 from django.db import models
 
 
@@ -62,3 +66,14 @@ class ChairmanSection(models.Model):
     def __str__(self) -> str:
         return self.chairman_name
 
+
+
+class about(models.Model):
+    title=models.CharField(max_length=500,blank=True,null=True)
+    about_description=models.TextField(max_length=5000,blank=True,null=True)
+    about_image=models.ImageField(upload_to='chairman')
+
+    def __str__(self) -> str:
+        return self.title
+
+    

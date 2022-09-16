@@ -32,3 +32,8 @@ class TeacherSectionAdmin(admin.ModelAdmin):
 @admin.register(ChairmanSection)
 class ChairmanSectionAdmin(admin.ModelAdmin):
     list_display= ('chairman_name', 'welcome_message', 'chairman_image')
+
+
+@admin.register(about)
+class aboutAdmin(admin.ModelAdmin):
+    list_display=('title','about_description','about_image')

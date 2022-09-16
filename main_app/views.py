@@ -54,3 +54,24 @@ def teacher_details(request):
     dict={}
     return render(request,'main_app/teacher-details.html',context=dict)
 
+
+
+def event(request):
+    dict={}
+
+    return render(request,'main_app/blog.html',context=dict)
+
+
+
+
+def contact(request):
+    dict={}
+
+    return render(request,'main_app/contact.html',context=dict)
+
+
+
+def blog(request):
+    dict={}
+
+    return render(request,'main_app/blog.html',context=dict)
