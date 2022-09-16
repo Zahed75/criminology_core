@@ -21,7 +21,7 @@ class Welcome(models.Model):
 class Facilites(models.Model):
     title=models.CharField(max_length=400,blank=True,null=True)
     image=models.ImageField(upload_to='facilites')
-    heading=models.CharField(max_length=500,blank=True,null=True)
+    heading=models.CharField(max_length=5000,blank=True,null=True)
     created=models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:

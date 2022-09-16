@@ -1293,14 +1293,17 @@ span.post-date i {
 }
 
 .hero-content h1 {
-  font-size: 60px;
+  font-size: 55px;
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 69px;
 }
-.hero-content p {
-  font-size: 24px;
-  font-weight: 300;
+
+.hero-content h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 69px;
 }
 
 .form-input {
