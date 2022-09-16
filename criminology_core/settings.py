@@ -80,16 +80,17 @@ WSGI_APPLICATION = 'criminology_core.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 if PRODUCTION:
     DATABASES = {
-    'default': {
-        'NAME': 'du_mvp',
-        'ENGINE': 'mysql.connector.django',
-        'USER': 'du_mvp',
-        'PASSWORD': 'M4743GZPRtxsMK2N',
-        'OPTIONS': {
-          'autocommit': True,
-        },
+        # Production configuration
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'du_mvp',
+            'USER': 'du_mvp',
+            'PASSWORD': 'M4743GZPRtxsMK2N',
+            'HOST': '127.0.0.1',
+            'PORT': '3306',
+        }
     }
-}
+
 
 else:
     DATABASES = {
