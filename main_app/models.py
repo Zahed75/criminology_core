@@ -1,7 +1,3 @@
-from distutils.command.upload import upload
-from operator import mod
-from statistics import mode
-from turtle import Turtle
 from django.db import models
 
 
