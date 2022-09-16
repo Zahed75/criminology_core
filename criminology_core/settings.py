@@ -82,7 +82,7 @@ if PRODUCTION:
     DATABASES = {
         # Production configuration
         'default': {
-            'ENGINE': 'mysql.connector.django',
+            'ENGINE': 'django.db.backends.mysql',
             'NAME': 'du_mvp',
             'USER': 'du_mvp',
             'PASSWORD': 'M4743GZPRtxsMK2N',
