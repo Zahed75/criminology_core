@@ -83,9 +83,9 @@ if PRODUCTION:
         # Production configuration
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'criminology_app',
-            'USER': 'criminology_app',
-            'PASSWORD': 'E6ZYekDA5GyLKRjP',
+            'NAME': 'du_mvp',
+            'USER': 'du_mvp',
+            'PASSWORD': 'M4743GZPRtxsMK2N',
             'HOST': '127.0.0.1',
             'PORT': '3306',
         }
