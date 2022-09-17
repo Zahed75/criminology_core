@@ -26,6 +26,23 @@ def faclities_details(request,pk):
     return render(request,'main_app/facilities-details.html',context=dict)
 
 
+def event(request):
+    ev=Event.objects.all().order_by('id')
+
+    dict={'ev':ev}
+
+    return render(request,'main_app/event.html',context=dict)
+
+
+def details_event(request,pk):
+    ev_details=EventDetails.objects.get(event_title_id=pk)
+    ev=Event.objects.get(id=pk)
+
+    dict={'ev':ev,'ev_details':ev_details}
+
+    return render(request,'main_app/event-details.html',context=dict)
+
+
 def about(request):
     dict={}
 
@@ -58,18 +75,7 @@ def teacher_details(request):
 
 
 
-def event(request):
-    ev=Event.objects.all()
 
-    dict={'ev':ev}
-
-    return render(request,'main_app/event.html',context=dict)
-
-
-def EventDetails(request):
-    dict={}
-
-    return render(request,'main_app/event-details.html',context=dict)
 
 
 

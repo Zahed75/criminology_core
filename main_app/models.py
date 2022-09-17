@@ -84,7 +84,7 @@ class Event(models.Model):
 
 
 class EventDetails(models.Model):
-    title=models.ForeignKey(Event,on_delete=models.CASCADE,related_name='EventDetails')
+    event_title=models.ForeignKey(Event,on_delete=models.CASCADE,related_name='EventDetails')
     event_descriptions=models.TextField(max_length=7000,blank=True,null=True)
     event_pdf=models.FileField(upload_to='department_files')
     event_main_speaker=models.CharField(max_length=123,blank=True,null=True)

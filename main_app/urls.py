@@ -10,7 +10,7 @@ urlpatterns = [
     path('teacher_details/',views.teacher_details,name='teacher_details'),
     path('course_details/<id>/',views.course_details,name='course_details'),
     path('event/',views.event,name='event'),
-    path('event-details/',views.EventDetails,name='event-details'),
+    path('event_details/<int:pk>/',views.details_event,name='event_details'),
     path('contact/',views.contact,name='contact'),
     path('blog/',views.blog,name='blog'),
 

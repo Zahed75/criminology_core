@@ -48,4 +48,4 @@ class EventAdmin(admin.ModelAdmin):
 
 @admin.register(EventDetails)
 class EventDetailsAdmin(admin.ModelAdmin):
-    list_display=('title','event_descriptions','event_pdf','event_main_speaker')
+    list_display=('event_title','event_descriptions','event_pdf','event_main_speaker')
