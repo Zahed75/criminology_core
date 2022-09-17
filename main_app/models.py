@@ -92,3 +92,41 @@ class EventDetails(models.Model):
 
     def __str__(self) -> str:
         return str('title')
+
+
+
+class Publications(models.Model):
+    title=models.CharField(max_length=500,blank=True,null=True)
+    publication_date=models.DateTimeField(blank=True,null=True)
+    descriptions=models.TextField(max_length=8000,blank=True,null=True)
+    image=models.ImageField(upload_to='chairman')
+
+    def __str__(self) -> str:
+        return self.title
+
+
+class PublicationDetail(models.Model):
+    title=models.ForeignKey(Publications,on_delete=models.CASCADE,related_name='PublicationDetail')
+    author_name=models.CharField(max_length=300,blank=True,null=True)
+
+
+    def __str__(self) -> str:
+        return str('title')
+
+
+
+class Research(models.Model):
+    title=models.CharField(max_length=400,blank=True,null=True)
+    image=models.ImageField(upload_to='chairman')
+    publish_date=models.DateTimeField(blank=True,null=True)
+
+    def __str__(self) -> str:
+        return self.title
+
+
+class ResearchDetail(models.Model):
+    title=models.ForeignKey(Research,on_delete=models.CASCADE,related_name='ResearchDetail')
+    author_name=models.CharField(max_length=120,blank=True,null=True)
+
+    def __str__(self)-> str:
+        return str('title')

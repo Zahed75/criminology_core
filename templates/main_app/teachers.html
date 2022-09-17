@@ -31,9 +31,9 @@
         <div class="card mb-5">
           <img src="{{x.TeacherImage.url}}" alt="image">
           <div class="card-body teacher-content p-25">
-            <h4 class="card-title mb-1"><a href="">{{x.teacher_name}}</a></h4>
+            <h4 class="card-title mb-1"><a href="/teacher_details/{{x.id}}">{{x.teacher_name}}</a></h4>
             <span class="primary-color d-block mb-4">{{x.TeacherDesignations}}</span>
-            <p class="card-text">W Lorem ipsum dolor sit amet, consectetur.</p>
+            <!-- <p class="card-text">teacher short brief</p> --> 
               <a href="/teacher_details/{{x.id}}"><p>Read More..!</p></a>
             <ul class="list-inline">
               <li><a target="_blank" href="{{x.FacebookLink}}"><i class="fa fa-facebook"></i></a></li>

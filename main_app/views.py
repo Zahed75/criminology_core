@@ -6,7 +6,7 @@ from main_app.pacakge import *
 
 def index(request):
     hm=Home.objects.all()
-    fac=Facilites.objects.all().order_by('id')
+    fac=Facilites.objects.all().order_by('id')[:3]
     wel=Welcome.objects.all
     welcontent=ChairmanSection.objects.all()
 
@@ -66,6 +66,7 @@ def course_details(request,id):
 
 def teacher(request):
     tc=TeacherSection.objects.all().order_by('id')
+
     dict={'tc':tc}
 
     return render(request,'main_app/teachers.html',context=dict)
@@ -80,9 +81,6 @@ def DetailsTeacher(request,pk):
 
 
 
-
-
-
 def contact(request):
     dict={}
 
@@ -90,7 +88,13 @@ def contact(request):
 
 
 
-def blog(request):
+def Research(request):
     dict={}
 
-    return render(request,'main_app/blog.html',context=dict)
+    return render(request,'main_app/research.html',context=dict)
+
+
+def pub(request):
+    dict={}
+
+    return render(request,'main_app/publications.html',context=dict)

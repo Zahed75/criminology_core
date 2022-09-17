@@ -55,3 +55,17 @@ class EventDetailsAdmin(admin.ModelAdmin):
 @admin.register(TeacherDetail)
 class TeacherDetailAdmin(admin.ModelAdmin):
     list_display=('id','teacher_name')
+
+
+@admin.register(Publications)
+class PublicationsAdmin(admin.ModelAdmin):
+    list_display=('id','title','descriptions','image')
+
+@admin.register(PublicationDetail)
+class PublicationDetailAdmin(admin.ModelAdmin):
+    list_display=('id','title','author_name')
+
+
+@admin.register(ResearchDetail)
+class ResearchDetaillAdmin(admin.ModelAdmin):
+    list_display=('id','title','author_name')
