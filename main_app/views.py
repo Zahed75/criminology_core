@@ -10,7 +10,7 @@ def index(request):
     wel=Welcome.objects.all
     welcontent=ChairmanSection.objects.all()
 
-    ev=Event.objects.all()
+    ev=Event.objects.all()[:4]
 
 
     dict = {'welcontent':welcontent,'hm':hm,'fac':fac,'wel':wel,'ev':ev}
@@ -59,10 +59,17 @@ def teacher_details(request):
 
 
 def event(request):
-    dict={}
+    ev=Event.objects.all()
+
+    dict={'ev':ev}
 
     return render(request,'main_app/event.html',context=dict)
 
+
+def EventDetails(request):
+    dict={}
+
+    return render(request,'main_app/event-details.html',context=dict)
 
 
 
