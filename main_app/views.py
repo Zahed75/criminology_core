@@ -105,6 +105,18 @@ def research_details(request,pk):
 
 
 def pub(request):
-    dict={}
+    pb=Publications.objects.all().order_by('id')
+
+    dict={'pb':pb}
 
     return render(request,'main_app/publications.html',context=dict)
+
+
+def pub_details(request,pk):
+    ev=Event.objects.all()[:3]
+    pb_details=PublicationDetail.objects.get(title_id=pk)
+    pb=Publications.objects.get(id=pk)
+    dict={'pb_details':pb_details,'pb':pb,'ev':ev}
+
+
+    return render(request,'main_app/publication-details.html',context=dict)

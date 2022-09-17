@@ -19,7 +19,9 @@ urlpatterns = [
     path('contact/',views.contact,name='contact'),
     path('research/',views.research,name='research'),
     path('research-details/<int:pk>/',views.research_details,name='research-details'),
-    path('publication/',views.pub,name='publication')
+    # =========================================================
+    path('publication/',views.pub,name='publication'),
+    path('details_pub/<int:pk>/',views.pub_details,name='details_pub')
 
 
 ]
