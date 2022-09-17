@@ -66,6 +66,11 @@ class PublicationDetailAdmin(admin.ModelAdmin):
     list_display=('id','title','author_name')
 
 
+@admin.register(Research)
+class ResearchAdmin(admin.ModelAdmin):
+    list_display=('id','title','image','publish_date')
+
+
 @admin.register(ResearchDetail)
-class ResearchDetaillAdmin(admin.ModelAdmin):
+class ResearchDetailAdmin(admin.ModelAdmin):
     list_display=('id','title','author_name')

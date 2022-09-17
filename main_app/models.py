@@ -119,7 +119,7 @@ class Research(models.Model):
     title=models.CharField(max_length=400,blank=True,null=True)
     image=models.ImageField(upload_to='chairman')
     publish_date=models.DateTimeField(blank=True,null=True)
-
+    descriptions=models.TextField(max_length=9000,blank=True,null=True)
     def __str__(self) -> str:
         return self.title
 

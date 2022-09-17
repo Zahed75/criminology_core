@@ -88,10 +88,20 @@ def contact(request):
 
 
 
-def Research(request):
-    dict={}
+def research(request):
+    rc=Research.objects.all().order_by('id')
+
+    dict={'rc':rc}
 
     return render(request,'main_app/research.html',context=dict)
+
+def research_details(request,pk):
+    rc_details=ResearchDetail.objects.get(title_id=pk)
+    rc=Research.objects.get(id=pk)
+
+    dict={'rc_details':rc_details,'rc':rc}
+
+    return render(request,'main_app/research-details.html',context=dict)
 
 
 def pub(request):

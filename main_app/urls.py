@@ -17,7 +17,8 @@ urlpatterns = [
     path('event_details/<int:pk>/',views.details_event,name='event_details'),
     # ======================================================
     path('contact/',views.contact,name='contact'),
-    path('research/',views.Research,name='research'),
+    path('research/',views.research,name='research'),
+    path('research-details/<int:pk>/',views.research_details,name='research-details'),
     path('publication/',views.pub,name='publication')
 
 
