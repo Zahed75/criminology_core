@@ -26,7 +26,7 @@ class FacilitiesDetails(admin.ModelAdmin):
 
 @admin.register(TeacherSection)
 class TeacherSectionAdmin(admin.ModelAdmin):
-    list_display = ('TeacherName', 'TeacherDesignations', 'TeacherImage')
+    list_display = ('teacher_name', 'TeacherDesignations', 'TeacherImage')
 
 
 @admin.register(ChairmanSection)
@@ -36,7 +36,7 @@ class ChairmanSectionAdmin(admin.ModelAdmin):
 
 @admin.register(about)
 class aboutAdmin(admin.ModelAdmin):
-    list_display=('title','about_description','about_image')
+    list_display=('about_description','about_image')
 
 
 
@@ -49,3 +49,9 @@ class EventAdmin(admin.ModelAdmin):
 @admin.register(EventDetails)
 class EventDetailsAdmin(admin.ModelAdmin):
     list_display=('event_title','event_descriptions','event_pdf','event_main_speaker')
+
+
+
+@admin.register(TeacherDetail)
+class TeacherDetailAdmin(admin.ModelAdmin):
+    list_display=('id','teacher_name')

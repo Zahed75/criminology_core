@@ -40,18 +40,19 @@ class FacilitiesDetails(models.Model):
         return str('title')
 
 class TeacherSection(models.Model):
-    TeacherName=models.CharField(max_length=700,blank=True)
+    teacher_name=models.CharField(max_length=700,blank=True)
     TeacherImage=models.ImageField(upload_to='teacherprofile')
     TeacherDesignations=models.CharField(max_length=400,null=True)
-
-
-    def __str__(self):
-        return self.TeacherName
-
-class TeacherDetail(models.Model):
-    TeacherName=models.ForeignKey(TeacherSection,on_delete=models.CASCADE,related_name='TeacherDetail')
     FacebookLink=models.URLField(max_length=200,blank=True,null=True)
     TwitterLink=models.URLField(max_length=200,blank=True,null=True)
+
+    def __str__(self):
+        return self.teacher_name
+
+class TeacherDetail(models.Model):
+    teacher_name=models.ForeignKey(TeacherSection,on_delete=models.CASCADE,related_name='TeacherDetail')
+    teacher_information=models.TextField(max_length=8000,blank=True,null=True)
+
 
 
 class ChairmanSection(models.Model):
@@ -65,12 +66,12 @@ class ChairmanSection(models.Model):
 
 
 class about(models.Model):
-    title=models.CharField(max_length=500,blank=True,null=True)
+
     about_description=models.TextField(max_length=5000,blank=True,null=True)
     about_image=models.ImageField(upload_to='chairman')
 
     def __str__(self) -> str:
-        return self.title
+        return str('id')
 
 
 class Event(models.Model):

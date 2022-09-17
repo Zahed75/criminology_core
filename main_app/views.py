@@ -43,8 +43,9 @@ def details_event(request,pk):
     return render(request,'main_app/event-details.html',context=dict)
 
 
-def about(request):
-    dict={}
+def AboutSection(request):
+    abt=about.objects.all()
+    dict={'abt':abt}
 
     return render(request,'main_app/about.html',context=dict)
 
@@ -64,13 +65,16 @@ def course_details(request,id):
 
 
 def teacher(request):
-    dict={}
+    tc=TeacherSection.objects.all().order_by('id')
+    dict={'tc':tc}
 
     return render(request,'main_app/teachers.html',context=dict)
 
 
-def teacher_details(request):
-    dict={}
+def DetailsTeacher(request,pk):
+    tc_details=TeacherDetail.objects.get(teacher_name_id=pk)
+    tc=TeacherSection.objects.get(id=pk)
+    dict={'tc_details':tc_details,'tc':tc}
     return render(request,'main_app/teacher-details.html',context=dict)
 
 
