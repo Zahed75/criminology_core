@@ -1,4 +1,3 @@
-import imp
 from django.db import models
 import datetime
 
@@ -8,7 +7,7 @@ import datetime
 class Home(models.Model):
     heading=models.CharField(max_length=500,blank=True,null=True)
     sub_heading=models.CharField(max_length=400,null=True,blank=True)
-    
+
     def __str__(self) -> str:
         return self.heading
 
@@ -73,4 +72,21 @@ class about(models.Model):
     def __str__(self) -> str:
         return self.title
 
-    
+
+class Event(models.Model):
+    event_title=models.CharField(max_length=100,blank=True,null=True)
+    event_date=models.DateTimeField()
+    event_time=models.CharField(max_length=40,blank=True,null=True)
+
+    def __str__(self) -> str:
+        return self.event_title
+
+
+class EventDetails(models.Model):
+    title=models.ForeignKey(Event,on_delete=models.CASCADE,related_name='EventDetails')
+    event_descriptions=models.TextField(max_length=7000,blank=True,null=True)
+    event_pdf=models.FileField(upload_to='department_files')
+
+
+    def __str__(self) -> str:
+        return self.__str_(title)

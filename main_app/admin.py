@@ -37,3 +37,15 @@ class ChairmanSectionAdmin(admin.ModelAdmin):
 @admin.register(about)
 class aboutAdmin(admin.ModelAdmin):
     list_display=('title','about_description','about_image')
+
+
+
+@admin.register(Event)
+class EventAdmin(admin.ModelAdmin):
+    list_display=('event_title','event_date','event_time')
+
+
+
+@admin.register(EventDetails)
+class EventDetailsAdmin(admin.ModelAdmin):
+    list_display=('title','event_descriptions','event_pdf')

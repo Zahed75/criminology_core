@@ -844,7 +844,7 @@ img.title-top-shape {
   display: flex;
   border-radius: 10px;
   overflow: hidden;
-  background: url(../images/bg/take-toure-bg.jpg) center/cover no-repeat;
+  background: url(../images/bg/banner-bg5.jpg) center/cover no-repeat;
 }
 
 .video-area:before {
@@ -1265,7 +1265,7 @@ span.post-date i {
   position: relative;
   z-index: 1;
   padding: 170px 0;
-  background: url(../images/bg/slider.jpg) center/cover no-repeat;
+  background: url(../images/bg/Criminology.jpg) center/cover no-repeat;
 }
 
 .hero-area:before {

@@ -9,9 +9,11 @@ def index(request):
     fac=Facilites.objects.all().order_by('id')
     wel=Welcome.objects.all
     welcontent=ChairmanSection.objects.all()
-   
-  
-    dict = {'welcontent':welcontent,'hm':hm,'fac':fac,'wel':wel}
+
+    ev=Event.objects.all()
+
+
+    dict = {'welcontent':welcontent,'hm':hm,'fac':fac,'wel':wel,'ev':ev}
     return render(request, 'main_app/index.html', context=dict)
 
 
@@ -38,7 +40,7 @@ def course(request):
 
 
 def course_details(request,id):
-    
+
     dict={}
 
     return render(request,'main_app/course-details.html',context=dict)
@@ -59,7 +61,7 @@ def teacher_details(request):
 def event(request):
     dict={}
 
-    return render(request,'main_app/blog.html',context=dict)
+    return render(request,'main_app/event.html',context=dict)
 
 
 

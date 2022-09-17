@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 
 from pathlib import Path
-import pymysql 
-pymysql.install_as_MySQLdb()
+# import pymysql
+# pymysql.install_as_MySQLdb()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-mi%v4kpg@921@-!28r1546l$=gn%%p*47_+()p-c_c2km(4bvl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-PRODUCTION = True
+PRODUCTION = False
 
 # ALLOWED_HOSTS = ['www.criminology.du.ac.bd','criminology.du.ac.bd','https://criminology.du.ac.bd/']
 ALLOWED_HOSTS = ["*"]
@@ -128,7 +128,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Dhaka'
 
 USE_I18N = True
 

@@ -45,7 +45,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-3 col-sm-6 d-block d-lg-none">
                     <div class="logo">
-                        <a href="{% url 'home' %}"><img src="{% static 'assets/images/icon/logo.png' %}" alt="logo"></a>
+                        <a href="{% url 'home' %}"><img src="{% static 'assets/images/icon/du_logo.png' %}" alt="logo"></a>
                     </div>
                 </div>
                 <div class="col-lg-9 offset-lg-1 d-none d-lg-block">
@@ -63,29 +63,29 @@
                                 <li><a href="javascript:void(0);">Courses</a>
                                     <ul class="submenu">
                                         <li><a href="{% url 'course' %}">courses</a></li>
-                                        {% comment %} <li><a href="course-details.html">course details</a></li> {% endcomment %}
+                                  {% comment %} <li><a href="course-details.html">course details</a></li>  {% endcomment %}
                                     </ul>
                                 </li>
-                                <li><a href="">teacher</a>  
+                                <li><a href="{% url 'teacher' %}">Faculty</a>  
                                     <ul class="submenu">
                                         <li><a href="{% url 'teacher' %}">teachers</a></li>
-                                        {% comment %} <li><a href="teacher-details.html">teacher details</a></li> {% endcomment %}
+                                        <li><a href="teacher-details.html">Staff</a></li>  
                                     </ul>
                                 </li>
                                 <li class="middle-logo">
                                     <a href="{% url 'home' %}">
-                                        <img src="{% static 'assets/images/icon/dhaka-university-logo.png' %}"
+                                        <img src="{% static 'assets/images/icon/du_logo.png' %}"
                                              alt="logo">
-                                        <img class="hb-bottom-shape"
+                                        <!-- <img class="hb-bottom-shape"
                                              src="{% static 'assets/images/icon/hb-bottom-shape.png'%}"
-                                             alt="logo">
+                                             alt="logo"> -->
                                     </a>
                                 </li>
-                                <li><a href="#">Events</a></li>
+                                <li><a href="{% url 'event' %}">Events</a></li>
                                 <li><a href="{% url 'blog' %}">blog</a>
                                     <ul class="submenu">
                                         <li><a href="{% url 'blog' %}">All-Blogs</a></li>
-                                        <!-- <li><a href="blog-details.html">blog details</a></li> -->
+                                    <li><a href="#">Notices</a></li> 
                                     </ul>
                                 </li>
                                 <li><a href="{% url 'contact' %}">Contact</a></li>
