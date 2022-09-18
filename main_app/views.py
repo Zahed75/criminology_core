@@ -11,12 +11,12 @@ def index(request):
     welcontent=ChairmanSection.objects.all()
     pb=Publications.objects.all()[:3]
 
-    # ev=Event.objects.all()[:3]
+    ev=Event.objects.all()[:3]
 
 
     dict = {'welcontent':welcontent,
     'hm':hm,'fac':fac,
-    'wel':wel,'pb':pb}
+    'wel':wel,'pb':pb,'ev':ev}
     return render(request, 'main_app/index.html', context=dict)
 
 
