@@ -18,20 +18,14 @@
         <div class="hero-content">
           <h3>CRIME|INVESTIGATIONS|TRACK</h3>
           <h1 class="mb-5">
-            <span class="primary-color">Build your Successful</span
-            ><b class="line-break"></b>Future with Criminology Department
+            <span class="primary-color">Build your Successful</span><b class="line-break"></b>Future with Criminology Department
           </h1>
           <p class="text-white-50">
             Find Your Preferred Informations & Improve Your Skills
           </p>
           <form action="#">
             <div class="form-input mt-5">
-              <input
-                type="text"
-                name="search"
-                required
-                placeholder="Enter your keyword..."
-              />
+              <input type="text" name="search" required placeholder="Enter your keyword..." />
               <button class="btn btn-primary btn-round" type="submit">
                 Seacrh
               </button>
@@ -57,18 +51,18 @@
               Welcome to <b class="line-break"></b>
               <span class="text-color">the Department of Criminology, </span>University of Dhaka!
             </h2>
-              <img class="thumb" src="{{x.chairman_image.url}}" alt="">
-              <h6>{{x.chairman_name}}</h6>
-              <p>Chairman,Department of Criminology, University of Dhaka</p>
+            <img class="thumb" src="{{x.chairman_image.url}}" alt="">
+            <h6>{{x.chairman_name}}</h6>
+            <p>Chairman,Department of Criminology, University of Dhaka</p>
 
             <h4>{{x.chairman_message}}</h4>
           </div>
           {% endfor %}
-            {% for z in wel %}
+          {% for z in wel %}
           <p class="text-white-70">
-           {{z.descriptions}}
+            {{z.descriptions}}
           </p>
-         {% endfor %}
+          {% endfor %}
           <a class="btn btn-light btn-round mt-3" href="#">Read more</a>
         </div>
       </div>
@@ -79,215 +73,183 @@
 
 <!-- course area start -->
 <div class="course-area  ptb--120">
-    <div class="container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="section-title-style2 black-title title-tb text-center">
+          <span>build your career</span>
+          <h2 class="primary-color">Our Facilites & Courses</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-area  pt--120 pb--70">
+      <div class="container">
         <div class="row">
-            <div class="col-md-10 offset-md-1">
-                <div class="section-title-style2 black-title title-tb text-center">
-                    <span>build your career</span>
-                    <h2 class="primary-color">Our Facilites & Courses</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="blog-area  pt--120 pb--70">
-            <div class="container">
-                <div class="row">
-                    <!-- facilities single start -->
-                    {% for x in fac %}
-                    <div class="col-lg-4 col-md-6">
-                      <div class="card mb-5">
-                        <img class="card-img-top" src="{{x.image.url}}" alt="image">
-                        <div class="card-body p-25">
-                            <ul class="list-inline blog-meta mb-3">
-                                <li><i class="fa fa-clock-o"></i>{{x.created}}</li>
-                                <li><i class="fa fa-comments"></i> 3 Comments</li>
-                            </ul>
-                          <h4 class="card-title mb-4"><a href="/facilites-details/{{x.id}}">{{x.title}}</a></h4>
-                          <p class="card-text">{{x.heading|slice:"200"}}......</p>
-                          <a class="btn btn-primary btn-round btn-sm" href="/facilites-details/{{x.id}}"> Read More </a>
-                        </div>
-                      </div><!-- card -->
-                    </div>
-                        {% endfor %}
-
-                    <!-- facilites single end -->
-                </div>
-            </div>
-        </div>
-<!-- course area end -->
-
-  <!-- take toure area start -->
-  <div class="take-toure-area ptb--120">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 offset-md-1">
-          <div class="section-title-style2 white-title text-center">
-            <span>Take A Look</span>
-            <h2>Criminology Department Farewell</h2>
+          <!-- facilities single start -->
+          {% for x in fac %}
+          <div class="col-lg-4 col-md-6">
+            <div class="card mb-5">
+              <img class="card-img-top" src="{{x.image.url}}" alt="image">
+              <div class="card-body p-25">
+                <ul class="list-inline blog-meta mb-3">
+                  <li><i class="fa fa-clock-o"></i>{{x.created}}</li>
+                  <li><i class="fa fa-comments"></i> 3 Comments</li>
+                </ul>
+                <h4 class="card-title mb-4"><a href="/facilites-details/{{x.id}}">{{x.title}}</a></h4>
+                <p class="card-text">{{x.heading|slice:"200"}}......</p>
+                <a class="btn btn-primary btn-round btn-sm" href="/facilites-details/{{x.id}}"> Read More </a>
+              </div>
+            </div><!-- card -->
           </div>
+          {% endfor %}
+
+          <!-- facilites single end -->
         </div>
-      </div>
-      <div class="video-area">
-        <a
-          class="expand-video"
-          href="https://www.youtube.com/watch?v=Z_HdoTg4YOw"
-          ><i class="fa fa-play"></i
-        ></a>
       </div>
     </div>
-  </div>
-  <!-- take toure area end -->
+    <!-- course area end -->
 
-  <!-- events area start -->
-  <div class="event-area pt--120 pb--80">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 offset-md-1">
-          <div class="section-title-style2 black-title text-center">
-            <span>Join with us</span>
-            <h2>Upcoming Events</h2>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        {% for x in ev %}
-        <div class="col-md-6">
-          <div class="media align-items-center mb-5">
-            <div class="media-head primary-bg">
-              <span><sub></sub>{{x.event_date}}</span>
-              <!-- <p>{% now " Y " %}</p> -->
-            </div>
-            <div class="media-body">
-              <h4><a href="/event_details/{{x.id}}">{{x.event_title}}</a></h4>
-              <p><i class="fa fa-clock-o"></i>{{x.event_time}}</p>
+    <!-- take toure area start -->
+    <div class="take-toure-area ptb--120">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <div class="section-title-style2 white-title text-center">
+              <span>Take A Look</span>
+              <h2>Criminology Department Farewell</h2>
             </div>
           </div>
-          <!-- media -->
         </div>
-
-        <!-- col-md-6 -->
-        {% endfor %}
+        <div class="video-area">
+          <a class="expand-video" href="https://www.youtube.com/watch?v=Z_HdoTg4YOw"><i class="fa fa-play"></i></a>
+        </div>
       </div>
-
-      <!-- row -->
     </div>
-    <!-- container -->
-  </div>
-  <!-- events area end -->
+    <!-- take toure area end -->
+
+    <!-- events area start -->
+    <div class="event-area pt--120 pb--80">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <div class="section-title-style2 black-title text-center">
+              <span>Join with us</span>
+              <h2>Upcoming Events</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          {% for x in ev %}
+          <div class="col-md-6">
+            <div class="media align-items-center mb-5">
+              <div class="media-head primary-bg">
+                <span><sub></sub>{{x.event_date}}</span>
+                <!-- <p>{% now " Y " %}</p> -->
+              </div>
+              <div class="media-body">
+                <h4><a href="/event_details/{{x.id}}">{{x.event_title}}</a></h4>
+                <p><i class="fa fa-clock-o"></i>{{x.event_time}}</p>
+              </div>
+            </div>
+            <!-- media -->
+          </div>
+
+          <!-- col-md-6 -->
+          {% endfor %}
+        </div>
+
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </div>
+    <!-- events area end -->
 
     <!-- testimonial area start -->
     <div class="testimonial-area ptb--120">
       <img class="tst-bg" src="assets/images/bg/tst-bg-shape.png" alt="image">
       <div class="container">
-          <div class="row">
-              <div class="col-lg-6 offset-lg-3 text-center">
-                  <div class="tst-carousel owl-carousel">
-                      <div class="testimonial-content pb--40">
-                          <div class="section-title sec-style-two">
-                              <span class="text-uppercase primary-color mb-0">Happy students</span>
-                              <h2>Testimonial</h2>
-                          </div>
-                          <h3>‘‘ Vous devez profiter de la vie. Toujours aimez, les personnespositives penser. ‘‘</h3>
-                          <h4>Kawsar Ahhamed</h4>
-                          <span>App Developer</span>
-                      </div>
-                      <div class="testimonial-content pb--40">
-                          <div class="section-title sec-style-two">
-                              <span class="text-uppercase primary-color mb-0">Happy students</span>
-                              <h2>Testimonial</h2>
-                          </div>
-                          <h3>‘‘ Vous devez profiter de la vie. Toujours aimez, les personnespositives penser. ‘‘</h3>
-                          <h4>Kawsar Ahhamed</h4>
-                          <span>App Developer</span>
-                      </div>
-                      <div class="testimonial-content pb--40">
-                          <div class="section-title sec-style-two">
-                              <span class="text-uppercase primary-color mb-0">Happy students </span>
-                              <h2>Testimonial</h2>
-                          </div>
-                          <h3>‘‘ Vous devez profiter de la vie. Toujours aimez, les personnespositives penser. ‘‘</h3>
-                          <h4>Kawsar Ahhamed</h4>
-                          <span>App Developer</span>
-                      </div>
-                  </div>
-              </div><!-- row -->
-          </div><!-- row -->
-      </div><!-- container -->
-  </div><!-- testimonial-area -->
-
-   <!-- blog area start -->
-   <div class="feature-blog  ptb--120">
-    <div class="container">
         <div class="row">
-            <div class="col-md-10 offset-md-1">
-                <div class="section-title-style2 black-title title-tb text-center">
-                    <span>Criminology-</span>
-                    <h2>Our Publications</h2>
+          <div class="col-lg-6 offset-lg-3 text-center">
+            <div class="tst-carousel owl-carousel">
+              <div class="testimonial-content pb--40">
+                <div class="section-title sec-style-two">
+                  <span class="text-uppercase primary-color mb-0">Our Teachers Quotes</span>
+                  <!-- <h2>Testimonial</h2> -->
+                </div>
+                <h3>‘‘ Vous devez profiter de la vie. Toujours aimez, les personnespositives penser. ‘‘</h3>
+                <h4>Kawsar Ahhamed</h4>
+                <span>App Developer</span>
+              </div>
+              <div class="testimonial-content pb--40">
+                <div class="section-title sec-style-two">
+                  <span class="text-uppercase primary-color mb-0">Happy students</span>
+                  <h2>Testimonial</h2>
+                </div>
+                <h3>‘‘ Vous devez profiter de la vie. Toujours aimez, les personnespositives penser. ‘‘</h3>
+                <h4>Kawsar Ahhamed</h4>
+                <span>App Developer</span>
+              </div>
+              <div class="testimonial-content pb--40">
+                <div class="section-title sec-style-two">
+                  <span class="text-uppercase primary-color mb-0">Happy students </span>
+                  <h2>Testimonial</h2>
+                </div>
+                <h3>‘‘ Vous devez profiter de la vie. Toujours aimez, les personnespositives penser. ‘‘</h3>
+                <h4>Kawsar Ahhamed</h4>
+                <span>App Developer</span>
+              </div>
+            </div>
+          </div><!-- row -->
+        </div><!-- row -->
+      </div><!-- container -->
+    </div><!-- testimonial-area -->
+
+    <!-- blog area start -->
+    <div class="feature-blog  ptb--120">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <div class="section-title-style2 black-title title-tb text-center">
+              <span>Criminology-</span>
+              <h2>Our Publications</h2>
+            </div>
+          </div>
+        </div>
+        <!-- blog area start -->
+        <div class="blog-area  pt--120 pb--70">
+            <div class="container">
+                <div class="row">
+                  {% for x in pb %}
+                    <div class="col-lg-4 col-md-6 publication">
+                      <div class="card mb-5">
+                        <img class="card-img-top" src="{{x.image.url}}" alt="image">
+                        <div class="card-body p-25">
+                            <ul class="list-inline blog-meta mb-3">
+                                <li><i class="fa fa-clock-o"></i> {{x.publication_date}} </li>
+                                <!-- <li><i class="fa fa-comments"></i> 3 Comments</li> -->
+                            </ul>
+                          <h4 class="card-title mb-4"><a href="/details_pub/{{x.id}}">{{x.title|slice:"20"}}...</a></h4>
+                          <p class="card-text">{{x.descriptions|slice:"50"}}.......</p>
+                          <a class="btn btn-primary btn-round btn-sm" href="/details_pub/{{x.id}}"> Read More </a>
+                        </div>
+                      </div><!-- card -->
+                    </div>
+                    {% endfor %}
+                    <!-- blog single end -->
                 </div>
             </div>
         </div>
+        <!-- blog area end -->
 
-        <div class="row">
-            <div class="blog-carousel owl-carousel card-deck">
-              <div class="card mb-5">
-                <img class="card-img-top" src="assets/images/blog/blog-thumbnail1.jpg" alt="image">
-                <div class="card-body p-25">
-                    <ul class="list-inline primary-color mb-3">
-                        <li><i class="fa fa-clock-o"></i> AUGUST 6, 2017</li>
-                        <li><i class="fa fa-comments"></i> 3 Comments</li>
-                    </ul>
-                  <h4 class="card-title mb-4"><a href="blog.html">The Death Of architechture</a></h4>
-                  <p class="card-text">We’re a philosophical bunch here at School site and we have thought long and hard about.</p>
-                  <a class="btn btn-primary btn-round btn-sm" href="blog-details.html"> Read More </a>
-                </div>
-              </div><!-- card -->
-              <div class="card mb-5">
-                <img class="card-img-top" src="assets/images/blog/blog-thumbnail2.jpg" alt="image">
-                <div class="card-body p-25">
-                    <ul class="list-inline primary-color mb-3">
-                        <li><i class="fa fa-clock-o"></i> AUGUST 6, 2017</li>
-                        <li><i class="fa fa-comments"></i> 3 Comments</li>
-                    </ul>
-                  <h4 class="card-title mb-4"><a href="blog.html">Aenean id ullamcorper</a></h4>
-                  <p class="card-text">We’re a philosophical bunch here at School site and we have thought long and hard about.</p>
-                  <a class="btn btn-primary btn-round btn-sm" href="blog-details.html"> Read More </a>
-                </div>
-              </div><!-- card -->
 
-              <div class="card mb-5">
-                <img class="card-img-top" src="assets/images/blog/blog-thumbnail3.jpg" alt="image">
-                <div class="card-body p-25">
-                    <ul class="list-inline primary-color mb-3">
-                        <li><i class="fa fa-clock-o"></i> AUGUST 6, 2017</li>
-                        <li><i class="fa fa-comments"></i> 3 Comments</li>
-                    </ul>
-                  <h4 class="card-title mb-4"><a href="blog.html">The Death Of architechture</a></h4>
-                  <p class="card-text">We’re a philosophical bunch here at School site and we have thought long and hard about.</p>
-                  <a class="btn btn-primary btn-round btn-sm" href="blog-details.html"> Read More </a>
-                </div>
-              </div><!-- card -->
-              <div class="card mb-5">
-                <img class="card-img-top" src="assets/images/blog/blog-thumbnail1.jpg" alt="image">
-                <div class="card-body p-25">
-                    <ul class="list-inline primary-color mb-3">
-                        <li><i class="fa fa-clock-o"></i> AUGUST 6, 2017</li>
-                        <li><i class="fa fa-comments"></i> 3 Comments</li>
-                    </ul>
-                  <h4 class="card-title mb-4"><a href="blog.html">The Death Of architechture</a></h4>
-                  <p class="card-text">We’re a philosophical bunch here at School site and we have thought long and hard about.</p>
-                  <a class="btn btn-primary btn-round btn-sm" href="blog-details.html"> Read More </a>
-                </div>
-              </div><!-- card -->
-            </div><!-- blog-carousel -->
-        </div><!-- blog-carousel -->
-
+      </div>
     </div>
-</div>
 
 
 
-    </div>
   </div>
+</div>
 </div>
 {% endblock %}

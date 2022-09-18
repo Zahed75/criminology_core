@@ -9,11 +9,14 @@ def index(request):
     fac=Facilites.objects.all().order_by('id')[:3]
     wel=Welcome.objects.all
     welcontent=ChairmanSection.objects.all()
+    pb=Publications.objects.all()[:3]
 
     ev=Event.objects.all()[:4]
 
 
-    dict = {'welcontent':welcontent,'hm':hm,'fac':fac,'wel':wel,'ev':ev}
+    dict = {'welcontent':welcontent,
+    'hm':hm,'fac':fac,
+    'wel':wel,'ev':ev,'pb':pb}
     return render(request, 'main_app/index.html', context=dict)
 
 
