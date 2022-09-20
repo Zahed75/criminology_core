@@ -5,6 +5,7 @@ urlpatterns = [
     path('', views.index, name='home'),
     path('about/',views.AboutSection,name='about'),
     # ==============================================
+    path('facilities/',views.Fac,name='facilities'),
     path('facilites-details/<int:pk>/',views.faclities_details,name='facitlities-deatails'),
     # ===============================================
     path('teacher/',views.teacher,name='teacher'),
@@ -21,7 +22,7 @@ urlpatterns = [
     path('research-details/<int:pk>/',views.research_details,name='research-details'),
     # =========================================================
     path('publication/',views.pub,name='publication'),
-    path('details_pub/<int:pk>/',views.pub_details,name='details_pub')
+    path('details_pub/<int:pk>/',views.pub_details,name='details_pub'),
 
 
 ]

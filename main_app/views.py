@@ -11,12 +11,21 @@ def index(request):
     welcontent = ChairmanSection.objects.all()
     pb = Publications.objects.all()[:3]
 
-    ev = Event.objects.all()[:3]
+    ev = Event.objects.all()[:4]
 
     dict = {'welcontent': welcontent,
             'hm': hm, 'fac': fac,
             'pb': pb, 'ev': ev}
     return render(request, 'main_app/index.html', context=dict)
+
+
+
+def Fac(request):
+    fac=Facilites.objects.all().order_by('id')
+    dict={'fac':fac}
+
+    return render(request,'main_app/facilities.html',context=dict)
+
 
 
 def faclities_details(request, pk):

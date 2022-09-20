@@ -63,7 +63,7 @@
                                 <li><a href="javascript:void(0);">Courses</a>
                                     <ul class="submenu">
                                         <li><a href="{% url 'course' %}">courses</a></li>
-                              <li><a href="course-details.html">Facilities</a></li>
+                              <li><a href="{% url 'facilities' %}">Facilities</a></li>
 
                                     </ul>
                                 </li>
@@ -89,7 +89,7 @@
                                     <li><a href="#">Notices</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="{% url 'contact'%}">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
