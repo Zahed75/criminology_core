@@ -10,9 +10,9 @@ from .models import *
 class HomeAdmin(admin.ModelAdmin):
     list_display= ('heading', 'sub_heading')
 
-@admin.register(Welcome)
-class WelcomeAdmin(admin.ModelAdmin):
-    list_display= ('descriptions',)
+# @admin.register(Welcome)
+# class WelcomeAdmin(admin.ModelAdmin):
+#     list_display= ('descriptions',)
 
 @admin.register(Facilites)
 class FacilitesiAdmin(admin.ModelAdmin):

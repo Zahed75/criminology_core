@@ -30,6 +30,7 @@ DEBUG = True
 
 PRODUCTION = True
 
+
 # ALLOWED_HOSTS = ['www.criminology.du.ac.bd','criminology.du.ac.bd','https://criminology.du.ac.bd/']
 ALLOWED_HOSTS = ["*"]
 

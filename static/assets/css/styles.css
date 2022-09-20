@@ -2519,3 +2519,11 @@ h4.comment-title {
   width: 350px;
   text-align: center;
 }
+
+.welcome p{
+  text-align: justify;
+}
+
+.dp-tag {
+  text-align: center;
+}
