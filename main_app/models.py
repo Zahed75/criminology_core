@@ -63,7 +63,7 @@ class ChairmanSection(models.Model):
 
 class about(models.Model):
 
-    about_description=models.TextField(max_length=5000,blank=True,null=True)
+    about_description=models.TextField(max_length=40000,blank=True,null=True)
     about_image=models.ImageField(upload_to='chairman')
 
     def __str__(self) -> str:
