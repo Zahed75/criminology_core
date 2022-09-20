@@ -11,11 +11,7 @@ class Home(models.Model):
     def __str__(self) -> str:
         return self.heading
 
-# class Welcome(models.Model):
-#     descriptions=models.TextField(max_length=1000,null=True,blank=True)
 
-#     def __str__(self) -> str:
-#         return self.descriptions
 
 
 class Facilites(models.Model):
