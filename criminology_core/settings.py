@@ -78,6 +78,13 @@ TEMPLATES = [
 WSGI_APPLICATION = 'criminology_core.wsgi.application'
 
 
+
+
+
+CSRF_TRUSTED_ORIGINS = 'https://*.criminology.du.ac.bd',
+
+
+
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 if PRODUCTION:
