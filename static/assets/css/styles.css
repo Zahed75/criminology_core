@@ -2062,8 +2062,11 @@ h4.comment-title {
 .wd-offer {
   height: 155px;
   position: relative;
-  background: url(../images/bg/flwr-bg.jpg) center/cover no-repeat;
+  background: url(../gallery/t55.jpg) center/cover no-repeat;
 }
+
+
+
 
 .wd-offer .text {
   position: absolute;
