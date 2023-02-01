@@ -1615,7 +1615,7 @@ span.post-date i {
 .crumbs-area {
   position: relative;
   z-index: 1;
-  background: url(../gallery/t55.jpg);
+  /*background: url(../gallery/t55.jpg);*/
   padding: 213px 0 114px;
   background-size: cover;
 }
