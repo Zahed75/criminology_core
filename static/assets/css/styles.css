@@ -1193,9 +1193,9 @@ span.post-date i {
 }
 
 .menu-style2.main-menu nav > ul > li > a {
-  color: #151515;
-  padding: 54px 17px;
-  position: relative;
+    color: #151515;
+    padding: 20px 12px;
+    position: relative;
 }
 
 .menu-style2.main-menu nav > ul > li > a:before {
